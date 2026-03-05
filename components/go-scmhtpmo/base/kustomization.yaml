@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-scmhtpmo
+  janus-idp.io/tekton: go-scmhtpmo
+  backstage.io/kubernetes-id: go-scmhtpmo
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-scmhtpmo
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
